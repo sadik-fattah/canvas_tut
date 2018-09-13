@@ -1,0 +1,34 @@
+ <canvas width="800" height="600" id="canvas" class="test"></canvas>
+<style>
+    .test{
+        border: 2px solid #000;
+    }
+</style>
+<script>
+    var labels = ["JAN","FEB","MAR","APR","MAY"];
+    var data = [16,60 ,50,20, 78];
+var can = document.getElementById('canvas').getContext('2d');
+    can.fillStyle = 'blue';
+    for(var i =0; i<data.length;i++){
+        var db = data[i];
+        can.fillRect(50+ i*100,490-db*5 -30,50, db*5);
+    }
+    can.fillStyle = 'black';
+    can.lineWidth = 2.0;
+    can.beginPath();
+    can.moveTo(35,20);
+    can.lineTo(35,459);
+    can.lineTo(670,459);
+    can.stroke();
+    for(var t=0;t<6;t++){
+        can.fillText((5-t)*20+"",6,t*80+60);
+        can.beginPath();
+        can.moveTo(25,t*80+60);
+        can.lineTo(35,t*80+60);
+        can.stroke();
+    }
+    for(var s =0;s<5;s++){
+        can.fillText(labels[s],59+ s*100,480);
+    }
+</script>
+
