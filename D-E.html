@@ -1,0 +1,15 @@
+<canvas width="800" height="600" id="canvas" class="test"></canvas>
+<style>
+    .test{
+        border: 2px solid #000;
+    }
+</style>
+<script>   
+var can =document.getElementById('canvas').getContext('2d');
+can.fillStyle = 'red';
+can.globalAlpha = 50/100 ;
+can.fillRect(0,0,300,300);
+can.globalAlpha = 10/100;
+can.fillRect(120,120,300,300);
+can.globalAlpha = 1.0;    
+</script>
